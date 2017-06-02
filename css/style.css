@@ -1,5 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+
 * {
 	box-sizing:border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	padding-top: 50px;
+	font-family: 'Cardo', serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+#about {
+	color: purple;
+}
+
+.top-nav {
+	display: flex;
+	background: gray;
+	min-height: 50px;
+	overflow: hidden;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.top-nav a {
+	color: #fff;
+	text-decoration: none;
+	transition: .5s;
+}
+
+.top-nav a:hover {
+	border-bottom: 3px solid #dd1670;
+	color: #dd1670;
+	
+}
+
+.brand-text {
+	font-size: 30px;
+	margin-left: 15px;
+}
+
+.top-nav-list {
+	display: flex;
+	list-style: none;
+	margin-left: auto;
+
+}
+
+.top-nav-list li {
+	margin: 0px 15px;
+	padding: 5px;
+}
+
+.top-nav-list a {
+	padding: 5px;
+}
+
+.full-screen-bg {
+	height: calc(100vh - 50px);
+	width: 100%;
+	background-image: url("../images/lgstar.jpg");
+	background-size: cover;
+	background-position: center;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	color: #00e832;
+	transition: background-image .5s;
+
+}
+
+.flex-row {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.col-4-2-1 {
+	width: 23%;
+	margin: 1%;
+	padding: 10px;
+}
+
+.img-circle {
+	border-radius: 60%;
+	width: 100%;
+}
+
+@media (max-width: 1200px) {
+	.full-screen-bg {
+		background-image: url("../images/medstar.jpg")
+	}
+	.flex-row {
+		flex-wrap: wrap;
+	}
+	.col-4-2-1 {
+		width: 48%;
+	}
+}
+
+@media (max-width: 600px) {
+	.top-nav {
+		display: block;
+	}
+	.full-screen-bg {
+		background-image: url("../images/smallstar.jpg");
+	}
+	.col-4-2-1 {
+		width: 98%;
+	}
 }
